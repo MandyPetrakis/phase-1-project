@@ -1,0 +1,33 @@
+{"employees": [
+{
+    "id": "1",
+    "name" : "Tina Belcher",
+    "employee ratings": {
+        "customer experience": "5",
+        "operations": "9",
+        "product knowledge":"9"},
+    "magaer ratings":{}
+},
+    
+{ 
+    "id": "2",
+    "name" : "Bart Simpson",
+    "employee ratings": {
+        "customer experience": "2",
+        "operations": "7",
+        "product knowledge":"4"},
+    "magaer ratings":{}
+},
+    
+{
+    "id": "3",
+    "name" : "Tommy Pickles",
+    "employee ratings": {
+        "customer experience": "8",
+        "operations": "4",
+        "product knowledge":"8"},
+    "magaer ratings":{}
+}
+]
+    
+}
