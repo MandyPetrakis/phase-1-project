@@ -3,31 +3,77 @@
     "id": "1",
     "name" : "Tina Belcher",
     "employee ratings": {
-        "customer experience": "5",
-        "operations": "9",
-        "product knowledge":"9"},
-    "magaer ratings":{}
+        "2022-12-27": 
+                    {
+                    "customer experience": "5",
+                    "operations": "9",
+                    "product knowledge":"9"
+                    },
+        "2022-12-28": 
+                    {
+                    "customer experience": "6",
+                    "operations": "8",
+                    "product knowledge":"6"
+                    },
+        "2022-12-29": 
+                    {
+                    "customer experience": "6",
+                    "operations": "9",
+                    "product knowledge":"3"
+                    },
+    "manager ratings":{}
+}
 },
-    
 { 
     "id": "2",
-    "name" : "Bart Simpson",
-    "employee ratings": {
-        "customer experience": "2",
-        "operations": "7",
-        "product knowledge":"4"},
-    "magaer ratings":{}
-},
-    
+    "name" : "Mr. Frond",
+    "employee ratings":       
+    {  
+        "2022-12-27": 
+                    {
+                    "customer experience": "3",
+                    "operations": "6",
+                    "product knowledge":"2"
+                    },
+        "2022-12-28": 
+                    {
+                     "customer experience": "5",
+                    "operations": "6",
+                    "product knowledge":"4"
+                    },
+        "2022-12-29": 
+                     {
+                    "customer experience": "6",
+                    "operations": "8",
+                    "product knowledge":"3"
+                    },
+    "manager ratings":{}
+}},
+   
 {
     "id": "3",
-    "name" : "Tommy Pickles",
-    "employee ratings": {
-        "customer experience": "8",
-        "operations": "4",
-        "product knowledge":"8"},
-    "magaer ratings":{}
-}
+    "name" : "Jimmy Pesto",
+    "employee ratings":     {  
+        "2022-12-27": 
+                    {
+                    "customer experience": "3",
+                    "operations": "6",
+                    "product knowledge":"2"
+                    },
+        "2022-12-28": 
+                    {
+                    "customer experience": "5",
+                    "operations": "6",
+                    "product knowledge":"4"
+                    },
+        "2022-12-29": 
+                     {
+                    "customer experience": "6",
+                    "operations": "8",
+                    "product knowledge":"3"
+                    },
+    "manager ratings":{}
+}}
 ]
     
 }
