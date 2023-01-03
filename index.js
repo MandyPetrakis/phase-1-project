@@ -1,8 +1,4 @@
-//to do
-// create new employee: form, sends post request
-//
-
-// variable declarations: data
+// variable declarations
 
 let currentEmployeeId;
 let employeeData;
@@ -21,6 +17,7 @@ let productKnowledgeSelection = document.getElementById("productKnowledge");
 let evalDiv = document.getElementById("evalDiv");
 let submit = document.getElementById("submitReview");
 let chartDiv = document.getElementById("chartContainer");
+let catchDiv = document.getElementById("catch");
 
 //grab elements: charts
 
@@ -36,7 +33,7 @@ employeeSelection.addEventListener("change", (event) => {
   employeeName.textContent =
     employeeSelection.options[employeeSelection.selectedIndex].text;
   currentEmployeeId = event.target.value.toString();
-  evalDiv.hidden = false;
+  catchDiv.hidden = false;
 });
 
 customerExperienceSelection.addEventListener("change", (event) => {
@@ -55,8 +52,6 @@ productKnowledgeSelection.addEventListener("change", (event) => {
 });
 
 submit.addEventListener("click", () => {
-  //POST customerExperienceRating, operationsRating, productKnowledgeRating to db.
-
   renderChart(
     customerExperienceChart,
     "customerExperienceE",
@@ -67,7 +62,7 @@ submit.addEventListener("click", () => {
   chartDiv.hidden = false;
 });
 
-//function: add employees from db.json
+//functions
 
 function addEmployeeOptions() {
   employeeSelection.length = 0;
@@ -93,23 +88,24 @@ function addEmployeeOptions() {
     });
   });
 }
-//function: update rating
 
 function updateRating(currentData, newData) {
   let currentEmployee = getEmployeeById(currentEmployeeId, employeeData);
   let currentRating = currentEmployee[`${currentData}`];
-  let newRating = currentRating.push(newData);
+  let newArray = currentRating.push(newData);
+  console.log(currentRating);
+
   fetch(`http://localhost:3000/employees/${currentEmployeeId}`, {
-    method: "PUT",
+    method: "PATCH",
     headers: {
       "Content-Type": "application/json",
       Accept: "application/json",
     },
-    body: JSON.stringify(newRating),
+    body: JSON.stringify({
+      [currentData]: newArray,
+    }),
   });
 }
-
-//function; load data for charts
 
 function loadData() {
   fetch(url)
@@ -117,9 +113,6 @@ function loadData() {
     .then((data) => (employeeData = data));
 }
 loadData();
-
-//function: render charts
-// adds data for each dataset (emp, manager)
 
 function renderChart(chartIdentifier, typeE, typeM) {
   return new Chart(chartIdentifier, {
@@ -164,52 +157,3 @@ function getEmployeeById(id, employees = []) {
     return person.id == id;
   });
 }
-
-addEmployeeOptions();
-
-// async function loadData3() {
-//   const response = await fetch(url)
-//     .then((r) => r.json())
-//     .then((data) => (employeeData = data));
-//   return response;
-// }
-
-// async function init() {
-//   console.log("run");
-//   let data = await loadData3();
-//   console.log("data", data);
-//   addOptions(data.employees);
-
-//   //
-//   renderChart(customerExperienceChart);
-//   renderChart(operationsChart);
-//   renderChart(productKnowldgeChart);
-// }
-
-// init();
-
-// function loadData2(endpoint) {
-//   return fetch(endpoint).then((r) => r.json());
-// }
-
-//1. query API and get data
-// loadData2(url).then((data) => {
-//// DEMO //////
-// console.log("data", data);
-// employeeData = data;
-// currentEmployeeId = "emp-1";
-// let per = renderLabels();
-// console.log("per", per);
-// //////////////////
-
-//call functions
-//name each chart
-
-//2. Create drop-down selector using employee data
-// addOptions(data.employees);
-
-// //
-// renderChart(customerExperienceChart);
-// renderChart(operationsChart);
-// renderChart(productKnowldgeChart);
-// });

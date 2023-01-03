@@ -1,7 +1,7 @@
 {
   "employees": [
     {
-      "id": "emp-1",
+      "id": "1",
       "name": "Tina Belcher",
       "datesWorked": ["2022-12-26", "2022-12-27", "2022-12-28"],
       "customerExperienceE": ["5", "9", "9"],
@@ -13,7 +13,7 @@
     },
 
     {
-      "id": "emp-2",
+      "id": "2",
       "name": "Mr. Frond",
       "datesWorked": ["2022-12-26", "2022-12-27", "2022-12-28"],
       "customerExperienceE": ["5", "9", "9"],
@@ -25,7 +25,7 @@
     },
 
     {
-      "id": "emp-3",
+      "id": "3",
       "name": "Jimmy Pesto",
       "datesWorked": ["2022-12-26", "2022-12-27", "2022-12-28"],
       "customerExperienceE": ["5", "9", "9"],
@@ -36,7 +36,7 @@
       "producKnowledgeM": ["7", "3"]
     },
     {
-      "id": "emp-4",
+      "id": "4",
       "name": "Mort",
       "datesWorked": ["2022-12-26", "2022-12-27", "2022-12-28"],
       "customerExperienceE": ["5", "9", "9"],
@@ -47,7 +47,7 @@
       "producKnowledgeM": ["7", "3"]
     },
     {
-      "id": "emp-5",
+      "id": "5",
       "name": "Teddy",
       "datesWorked": ["2022-12-26", "2022-12-27", "2022-12-28"],
       "customerExperienceE": ["5", "9", "9"],
