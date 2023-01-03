@@ -1,4 +1,8 @@
-// variable declarations
+//to do
+// create new employee: form, sends post request
+//
+
+// variable declarations: data
 
 let currentEmployeeId;
 let employeeData;
@@ -18,6 +22,7 @@ let evalDiv = document.getElementById("evalDiv");
 let submit = document.getElementById("submitReview");
 let chartDiv = document.getElementById("chartContainer");
 let catchDiv = document.getElementById("catch");
+let heading = document.getElementById("header");
 
 //grab elements: charts
 
@@ -27,7 +32,7 @@ let customerExperienceChart = document.getElementById(
 let operationsChart = document.getElementById("operationsChart");
 let productKnowledgeChart = document.getElementById("productKnowledgeChart");
 
-//create event listeners
+//event listeners
 
 employeeSelection.addEventListener("change", (event) => {
   employeeName.textContent =
@@ -60,6 +65,10 @@ submit.addEventListener("click", () => {
   renderChart(operationsChart, "operationsE", "operationsM");
   renderChart(productKnowledgeChart, "productKnowledgeE", "producKnowledgeM");
   chartDiv.hidden = false;
+});
+
+heading.addEventListener("mouseover", (event) => {
+  event.target.classList.add("red");
 });
 
 //functions
@@ -157,3 +166,5 @@ function getEmployeeById(id, employees = []) {
     return person.id == id;
   });
 }
+
+addEmployeeOptions();
