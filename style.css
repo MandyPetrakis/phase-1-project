@@ -1,0 +1,21 @@
+.inlineDiv {
+    width: 40%;
+    margin-top: 0px;
+    display: inline-block
+}
+
+#employeeSelection {
+    text-align: center;
+}
+
+#evalDiv {
+    text-align: right;
+}
+
+#employeeName {
+    color: red
+}
+
+header {
+    text-align: center;
+}

@@ -7,6 +7,7 @@
     <title>Document</title>
     <script src="index.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
 
 </head>
 <body>
@@ -18,14 +19,18 @@
         <label for="employees">Select Employee: </label>
         <select name="employees" id="employeeDropdown">
         </select>
-        <div id="employeeSelection">  
+        <br>
+
+        <div id="employeeSelection" class="inlineDiv">  
             <h2 id="employeeDisplay">Employee Being Evaluated:</h2>
             <h3 id="employeeName"></h3>
         </div>
-        <div>
-            <h2>Areas To Be Evaluated</h2>
+
+        <div id="evalDiv" class="inlineDiv" hidden = true  >
+            <h2>Focus Areas</h2>
             <label for="customerExperience">Customer Experience</label>
             <select name="customerExperience" id="customerExperience">
+                <option value="" disabled selected hidden></option>
                 <option value="10">10</option>
                 <option value="9">9</option> 
                 <option value="8">8</option>
@@ -38,14 +43,11 @@
                 <option value="1">1</option>
             </select></br>
 
-            <div>
-                <canvas id="CEChart"></canvas>
-              </div>
-              
 
  
             <label for="operations">Operations</label>
             <select name="operations" id="operations">
+                <option value="" disabled selected hidden></option>
                 <option value="10">10</option>
                 <option value="9">9</option> 
                 <option value="8">8</option>
@@ -57,13 +59,12 @@
                 <option value="2">2</option>
                 <option value="1">1</option>
             </select></br>
-            <div>
-                <canvas id="oChart"></canvas>
-              </div>
+
               
 
             <label for="productKnowledge">Product Knowledge</label>
             <select name="productKnowledge" id="productKnowledge">
+                <option value="" disabled selected hidden></option>
                 <option value="10">10</option>
                 <option value="9">9</option> 
                 <option value="8">8</option>
@@ -75,12 +76,27 @@
                 <option value="2">2</option>
                 <option value="1">1</option>
             </select>
-   
-            <div>
-                <canvas id="pChart"></canvas>
-              </div>
-
+        <br><br>
 <input id="submitReview" type="submit" value="Submit Review">
-    </main>
+    </div>
+</main>
+
+
+<div id="chartContainer" hidden>
+    <div>
+        <h2>Customer Experience</h2>
+        <canvas id="customerExperienceChart"></canvas>
+      </div>
+      
+    <div>
+        <h2>Operations</h2>
+        <canvas id="operationsChart"></canvas>
+      </div>
+    <div>
+        <h2>Product Knowledge</h2>
+        <canvas id="productKnowledgeChart"></canvas>
+      </div>
+
+</div>
 </body>
 </html>

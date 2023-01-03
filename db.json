@@ -1,79 +1,61 @@
-{"employees": [
 {
-    "id": "1",
-    "name" : "Tina Belcher",
-    "employee ratings": {
-        "2022-12-27": 
-                    {
-                    "customer experience": "5",
-                    "operations": "9",
-                    "product knowledge":"9"
-                    },
-        "2022-12-28": 
-                    {
-                    "customer experience": "6",
-                    "operations": "8",
-                    "product knowledge":"6"
-                    },
-        "2022-12-29": 
-                    {
-                    "customer experience": "6",
-                    "operations": "9",
-                    "product knowledge":"3"
-                    },
-    "manager ratings":{}
-}
-},
-{ 
-    "id": "2",
-    "name" : "Mr. Frond",
-    "employee ratings":       
-    {  
-        "2022-12-27": 
-                    {
-                    "customer experience": "3",
-                    "operations": "6",
-                    "product knowledge":"2"
-                    },
-        "2022-12-28": 
-                    {
-                     "customer experience": "5",
-                    "operations": "6",
-                    "product knowledge":"4"
-                    },
-        "2022-12-29": 
-                     {
-                    "customer experience": "6",
-                    "operations": "8",
-                    "product knowledge":"3"
-                    },
-    "manager ratings":{}
-}},
-   
-{
-    "id": "3",
-    "name" : "Jimmy Pesto",
-    "employee ratings":     {  
-        "2022-12-27": 
-                    {
-                    "customer experience": "3",
-                    "operations": "6",
-                    "product knowledge":"2"
-                    },
-        "2022-12-28": 
-                    {
-                    "customer experience": "5",
-                    "operations": "6",
-                    "product knowledge":"4"
-                    },
-        "2022-12-29": 
-                     {
-                    "customer experience": "6",
-                    "operations": "8",
-                    "product knowledge":"3"
-                    },
-    "manager ratings":{}
-}}
-]
-    
+  "employees": [
+    {
+      "id": "emp-1",
+      "name": "Tina Belcher",
+      "datesWorked": ["2022-12-26", "2022-12-27", "2022-12-28"],
+      "customerExperienceE": ["5", "9", "9"],
+      "operationsE": ["3", "5", "3"],
+      "productKnowledgeE": ["7", "2", "9"],
+      "customerExperienceM": ["5", "6"],
+      "operationsM": ["3", "7"],
+      "producKnowledgeM": ["7", "3"]
+    },
+
+    {
+      "id": "emp-2",
+      "name": "Mr. Frond",
+      "datesWorked": ["2022-12-26", "2022-12-27", "2022-12-28"],
+      "customerExperienceE": ["5", "9", "9"],
+      "operationsE": ["3", "5", "3"],
+      "productKnowledgeE": ["7", "2", "9"],
+      "customerExperienceM": ["5", "6"],
+      "operationsM": ["3", "7"],
+      "producKnowledgeM": ["7", "3"]
+    },
+
+    {
+      "id": "emp-3",
+      "name": "Jimmy Pesto",
+      "datesWorked": ["2022-12-26", "2022-12-27", "2022-12-28"],
+      "customerExperienceE": ["5", "9", "9"],
+      "operationsE": ["3", "5", "3"],
+      "productKnowledgeE": ["7", "2", "9"],
+      "customerExperienceM": ["5", "6"],
+      "operationsM": ["3", "7"],
+      "producKnowledgeM": ["7", "3"]
+    },
+    {
+      "id": "emp-4",
+      "name": "Mort",
+      "datesWorked": ["2022-12-26", "2022-12-27", "2022-12-28"],
+      "customerExperienceE": ["5", "9", "9"],
+      "operationsE": ["3", "5", "3"],
+      "productKnowledgeE": ["7", "2", "9"],
+      "customerExperienceM": ["5", "6"],
+      "operationsM": ["3", "7"],
+      "producKnowledgeM": ["7", "3"]
+    },
+    {
+      "id": "emp-5",
+      "name": "Teddy",
+      "datesWorked": ["2022-12-26", "2022-12-27", "2022-12-28"],
+      "customerExperienceE": ["5", "9", "9"],
+      "operationsE": ["3", "5", "3"],
+      "productKnowledgeE": ["7", "2", "9"],
+      "customerExperienceM": ["5", "6"],
+      "operationsM": ["3", "7"],
+      "producKnowledgeM": ["7", "3"]
+    }
+  ]
 }
