@@ -4,14 +4,13 @@
       "id": "1",
       "name": "Tina Belcher",
       "datesWorked": ["2022-12-26", "2022-12-27", "2022-12-28"],
-      "customerExperienceE": ["5", "9", "9"],
+      "customerExperienceE": ["8", "10", "9"],
       "operationsE": ["3", "5", "3"],
       "productKnowledgeE": ["7", "2", "9"],
-      "customerExperienceM": ["5", "6"],
+      "customerExperienceM": ["4", "5"],
       "operationsM": ["3", "7"],
       "producKnowledgeM": ["7", "3"]
     },
-
     {
       "id": "2",
       "name": "Mr. Frond",
@@ -23,17 +22,16 @@
       "operationsM": ["3", "7"],
       "producKnowledgeM": ["7", "3"]
     },
-
     {
       "id": "3",
       "name": "Jimmy Pesto",
       "datesWorked": ["2022-12-26", "2022-12-27", "2022-12-28"],
-      "customerExperienceE": ["5", "9", "9"],
+      "customerExperienceE": ["3", "4", "3"],
       "operationsE": ["3", "5", "3"],
-      "productKnowledgeE": ["7", "2", "9"],
-      "customerExperienceM": ["5", "6"],
-      "operationsM": ["3", "7"],
-      "producKnowledgeM": ["7", "3"]
+      "productKnowledgeE": ["2", "2", "4"],
+      "customerExperienceM": ["7", "8"],
+      "operationsM": ["7", "9"],
+      "producKnowledgeM": ["6", "8"]
     },
     {
       "id": "4",

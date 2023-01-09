@@ -44,16 +44,19 @@ employeeSelection.addEventListener("change", (event) => {
 customerExperienceSelection.addEventListener("change", (event) => {
   customerExperienceRating = event.target.value;
   updateRating("customerExperienceM", customerExperienceRating);
+  loadData();
 });
 
 operationsSelection.addEventListener("change", (event) => {
   operationsRating = event.target.value;
   updateRating("operationsM", operationsRating);
+  loadData();
 });
 
 productKnowledgeSelection.addEventListener("change", (event) => {
   productKnowledgeRating = event.target.value;
   updateRating("producKnowledgeM", productKnowledgeRating);
+  loadData();
 });
 
 submit.addEventListener("click", () => {
@@ -64,6 +67,7 @@ submit.addEventListener("click", () => {
   );
   renderChart(operationsChart, "operationsE", "operationsM");
   renderChart(productKnowledgeChart, "productKnowledgeE", "producKnowledgeM");
+
   chartDiv.hidden = false;
 });
 
@@ -72,6 +76,13 @@ heading.addEventListener("mouseover", (event) => {
 });
 
 //functions
+
+function loadData() {
+  fetch(url)
+    .then((r) => r.json())
+    .then((data) => (employeeData = data));
+}
+loadData();
 
 function addEmployeeOptions() {
   employeeSelection.length = 0;
@@ -101,8 +112,7 @@ function addEmployeeOptions() {
 function updateRating(currentData, newData) {
   let currentEmployee = getEmployeeById(currentEmployeeId, employeeData);
   let currentRating = currentEmployee[`${currentData}`];
-  let newArray = currentRating.push(newData);
-  console.log(currentRating);
+  let newArray = [...currentRating, newData];
 
   fetch(`http://localhost:3000/employees/${currentEmployeeId}`, {
     method: "PATCH",
@@ -115,13 +125,6 @@ function updateRating(currentData, newData) {
     }),
   });
 }
-
-function loadData() {
-  fetch(url)
-    .then((r) => r.json())
-    .then((data) => (employeeData = data));
-}
-loadData();
 
 function renderChart(chartIdentifier, typeE, typeM) {
   return new Chart(chartIdentifier, {
